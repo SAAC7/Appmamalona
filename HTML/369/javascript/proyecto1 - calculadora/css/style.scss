@@ -5,6 +5,7 @@
     font-family: sans-serif;
     font-size: 30px;
 }
+
 body {
     background: linear-gradient(45deg, rgb(0, 0, 100), rgb(42, 64, 112));
 }
@@ -17,91 +18,107 @@ body {
     justify-content: center;
     flex-wrap: wrap;
 }
-.calculator{
+
+.calculator {
     background: rgb(255, 255, 255);
     position: relative;
     height: auto;
     width: auto;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 5px 15px 15px rgba(0,0,0,.7);
-    #display{
-        color: rgb(0,0,0);  
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, .7);
+
+    #display {
+        color: rgb(0, 0, 0);
         width: auto;
         font-weight: bold;
     }
-    .display-screen{
+
+    .display-screen {
         height: 60px;
-        color: rgb(0,0,0);
-        border: 2px inset rgba(0,0,0,.5);
+        color: rgb(0, 0, 0);
+        border: 2px inset rgba(0, 0, 0, .5);
         border-radius: 10px;
         align-items: center;
         display: flex;
         justify-content: flex-end;
-        background: rgba(245,255,205,.8);
+        background: rgba(245, 255, 205, .8);
         margin-bottom: 20px;
     }
-    #clear{
+
+    #clear {
         background-color: rgb(164, 1, 1);
         color: white;
     }
-    .btn-number{
-        background-color: gray;
+
+    .btn-number {
+        background-color: rgb(128, 128, 128);
         color: white;
     }
-    .btn-operator{
+
+    .btn-operator {
         background-color: rgb(227, 112, 5);
         color: black;
     }
-    .btn-equal{
+
+    .btn-equal {
         background-color: rgb(251, 82, 82);
         color: black;
         height: 130px;
         border-radius: 30px;
     }
-    &.dark{
-        background-color: rgba(50, 50, 50, 0.921);
-        .btn-equal{
+
+    &.dark {
+        background-color: rgb(50, 50, 50);
+
+        .btn-equal {
             background-color: skyblue;
         }
-        .btn-number{
-            background-color: rgb(108, 108, 108);
-        }
-        .btn-operator{
+
+        // .btn-number{
+        //     background-color: rgb(128, 128, 128);
+        // }
+        .btn-operator {
             background-color: rgb(19, 145, 221);
             color: white;
         }
-        #clear{
-            background-color:rgb(83, 255, 244); ;
+
+        #clear {
+            background-color: rgb(83, 255, 244);
+            ;
             color: rgb(70, 1, 1);
         }
     }
 }
-.theme-toggler{
+
+.theme-toggler {
     position: absolute;
-    top: 30px;
-    right: 30px;
-    color: blueviolet;
-    cursor:pointer;
+    top: 100px;
+    right: 15px;
+    color: #fff;
+    cursor: pointer;
     z-index: 1;
-    &::before{
+
+    &::before {
+        position: absolute;
         content: "";
         height: 30px;
         width: 30px;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         border-radius: 50%;
-        background-color: #333;
+        background-color: rgb(60, 60, 60);
         z-index: -1;
     }
 }
-.theme-toggler .active{
-    color: #333;
-    &::before{
+
+.theme-toggler.active {
+    &::before {
         background-color: #fff;
     }
 }
-button{
+
+button {
     height: 60px;
     width: 60px;
     border: none;
@@ -109,7 +126,8 @@ button{
     margin: 5px;
     cursor: pointer;
     transition: all 200ms ease;
-    &:hover{
+
+    &:hover {
         transform: scale(1.1);
     }
 }
